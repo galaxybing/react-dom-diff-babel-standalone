@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- http://www.bootcdn.cn/ -->
+	<script type="text/javascript" src="//cdn.bootcss.com/react/15.5.4/react.min.js"></script>
+	<script src="//cdn.bootcss.com/react/15.5.4/react-dom.min.js"></script>
+
+	<!--
+	一）构建出来的 browser 版本 或 安装5.x版本的babel-core模块获取：
+	6.1.19 -> Uncaught TypeError: Cannot read property 'keys' of undefined
+	vs
+	5.6.15
+	//cdn.bootcss.com/babel-core/5.6.15/browser.min.js
+
+	二）使用babel-standalone模块提供的浏览器版本
+	Standalone build of Babel for use in non-Node.js environments. Similar to the (now deprecacted) babel-browser
+
+	-->
+	<script src="//cdn.bootcss.com/babel-standalone/6.24.0/babel.min.js"></script>
+
+	<link rel="stylesheet/less" type="text/css" href="index.less" />
+	<script src="//cdn.bootcss.com/less.js/3.0.0-pre.4/less.min.js"></script>
+  <meta charset="utf-8">
+  <title>React Virtual DOM Diff</title>
+</head>
+<body>
+  <button onclick="render('shape1')">Shape 1</button>
+  <button onclick="render('shape2')">Shape 2</button>
+  <button onclick="render('shape3')">Shape 3</button>
+  <button onclick="render('shape4')">Shape 4</button>
+  <button onclick="render('shape5')">Shape 5</button>
+  <button onclick="render('shape6')">Shape 6</button>
+  <button onclick="render('none')">Clear</button>
+  <div id="react-root"></div>
+  <script type="text/babel" src="index.jsx"></script>
+
+</body>
+</html>
